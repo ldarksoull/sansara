@@ -67,18 +67,11 @@ let app = new Vue({
                 components: []
             },
             {
-                id: 10,
-                name: 'Бетон',
-                weight: 11.3,
-                type: 'Переработка',
-                components: [138,141,78,83]
-            },
-            {
                 id: 11,
                 name: 'Бензин',
                 weight: 5,
                 type: 'Переработка',
-                components: [80,89]
+                components: [81,89]
             },
             {
                 id: 12,
@@ -821,7 +814,7 @@ let app = new Vue({
                 name: 'Строительные блоки',
                 weight: 5,
                 type: 'Крафт',
-                components: [10,8]
+                components: [11,8]
             },
             {
                 id: 122,
