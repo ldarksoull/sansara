@@ -23,41 +23,56 @@
                 </ul>
             </div>
             <div class="content">
-                    <div class="resurces">
-                        <transition name="fade">
-                        <div class="component main-component" v-if="activeResource != null">
-                            {{ activeResource.name }}
-                            <div class="content-info" >{{ 'Вес: ' + activeResource.weight + ' кг'}}</div>
-                            <div class="content-info">{{ 'Тип: ' + activeResource.type }}</div>
-                        </div>
+                <div class="resurces">
+                    <transition name="fade">
+                    <div class="component main-component" v-if="activeResource != null">
+                        {{ activeResource.name }}
+                        <div class="content-info" >{{ 'Вес: ' + activeResource.weight + ' кг'}}</div>
+                        <div class="content-info">{{ 'Тип: ' + activeResource.type }}</div>
+                    </div>
                     </transition>
-                        <div class="component-wrapper">
-                            
-                            <div class="component c1" v-for="resource in getResource(activeResource)">
+                    <div class="component-wrapper">
+                        <div class="component c1" v-for="resource in getResource(activeResource)">
+                            <a @click="activeResource=resource">{{ resource.name }}</a>
+                            <div>{{ resource.weight + ' кг' }}</div>
+                            <div class="component c2" v-for="resource in getResource(resource)">
                                 <a @click="activeResource=resource">{{ resource.name }}</a>
                                 <div>{{ resource.weight + ' кг' }}</div>
-                                
-
-                                <div class="component c2" v-for="resource in getResource(resource)">
+                                <div class="component c3" v-for="resource in getResource(resource)">
                                     <a @click="activeResource=resource">{{ resource.name }}</a>
-                                    <div>{{ resource.weight + ' кг' }}</div>
-                                    
-                                    <div class="component c3" v-for="resource in getResource(resource)">
+                                    <br>
+                                    {{ resource.weight + ' кг' }}
+                                    <div class="component c4" v-for="resource in getResource(resource)">
                                         <a @click="activeResource=resource">{{ resource.name }}</a>
-                                        <br>
-                                        {{ resource.weight + ' кг' }}
-                                        <div class="component c4" v-for="resource in getResource(resource)">
-                                            <a @click="activeResource=resource">{{ resource.name }}</a>
-                                            <div>{{ resource.weight + ' кг' }}</div>
-                                            
-                                        </div>
+                                        <div>{{ resource.weight + ' кг' }}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    
                     </div>
-                
+                </div>
+                <div class="calcs">
+                    <div class="calc1">
+                        <div class="calc-title">Калькулятор вместимости</div>
+                        <div class="calc-body">
+                            <div class="calc-input-wrapper">
+                                <div class="input-title">Введите вместимость вашего багажника</div>
+                                <input type="text" class="calc-input" v-model="bag">
+                            </div>
+                            <div class="calc-input-wrapper">
+                                <div class="input-title">Укажите вес ресурсов</div>
+                                <input type="text" class="calc-input" v-model="res1">
+                                <input type="text" class="calc-input" v-model="res2">
+                                <input type="text" class="calc-input" v-model="res3">
+                                <input type="text" class="calc-input" v-model="res4">
+                            </div>
+                            <div class="calc-input-wrapper">
+                                <div class="input-title">В багажник поместится по:</div>
+                                <div class="total">{{ calcTotal() + ' каждого ресурса' }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

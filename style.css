@@ -173,7 +173,40 @@ a{
 }
 .fade-enter-active, .fade-leave-active {
     transition: opacity .5s;
-  }
-  .fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
     opacity: 0;
-  }
+}
+.calcs{
+    background: rgba(0,0,0,0.3);
+    margin-top: 25px;
+    padding: 15px;
+    font-family: Arial;
+}
+.calc-body{
+    padding: 15px;
+    background: rgba(84, 85, 10, 0.3);
+}
+.calc-title{
+    font-size: 30px;
+    font-family: Arial;
+    margin-bottom: 5px;
+}
+.calc-input-wrapper{
+    margin-bottom: 15px;
+}
+.input-title{
+    margin-bottom: 5px;
+}
+.total{
+    font-size: 25px;
+}
+.calc-input{
+    border: none;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 5px;
+}

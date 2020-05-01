@@ -658,7 +658,7 @@ let app = new Vue({
                 name: 'Свиной фарш',
                 weight: 0,
                 type: 'Переработка',
-                components: [98]
+                components: [97]
             },
             {
                 id: 99,
@@ -997,7 +997,12 @@ let app = new Vue({
         type: '',
         activeItem: null,
         activeResource: null,
-        searchQuery: ''
+        searchQuery: '',
+        bag: 0,
+        res1: 0,
+        res2: 0,
+        res3: 0,
+        res4: 0,
     },
     methods:{
         c(){
@@ -1028,6 +1033,10 @@ let app = new Vue({
             });
             return resources;
         }, 
+        calcTotal(){
+            let sum = +this.res1 + +this.res2 + +this.res3 + +this.res4;
+            return Math.floor(+this.bag / sum)
+        }
     },
     computed: {
         filteredResources (){
@@ -1035,11 +1044,11 @@ let app = new Vue({
             return this.resources.filter((item)=>{
                 let result = item.name.toLowerCase().startsWith(this.searchQuery.toLowerCase());
                 return result
-                
             })
           }else{
             return this.resources;
           }
-        }
+        },
+        
       }
   })
