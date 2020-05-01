@@ -814,7 +814,7 @@ let app = new Vue({
                 name: 'Строительные блоки',
                 weight: 5,
                 type: 'Крафт',
-                components: [11,8]
+                components: [14,8]
             },
             {
                 id: 122,
