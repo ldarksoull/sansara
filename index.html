@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>база ресурсов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="app">
+        <header class="header">
+            <div class="title">База ресов сансары</div>
+        </header>
+        <div class="main" @click="c()">
+            <div class="sidebar">
+                <div class="sidebar-search">
+                    <input type="text" class="search-input" v-model="search">
+                    
+                </div>
+                <ul class="res-list">
+                    <li @click="activeResource=item"  class="res-item" :class="{active: item === activeResource}" v-for="(item, index) in resources" :key="index">
+                        {{ item.id }}. {{ item.name }}
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                
+                
+               
+                    <div class="resurces">
+                        <transition name="fade">
+                        <div class="component main-component" v-if="activeResource != null">
+                            {{ activeResource.name }}
+                            <div class="content-info" >{{ 'Вес: ' + activeResource.weight + ' кг'}}</div>
+                            <div class="content-info">{{ 'Тип: ' + activeResource.type }}</div>
+                        </div>
+                    </transition>
+                        <div class="component-wrapper">
+                            
+                            <div class="component c1" v-for="resource in getResource(activeResource)">
+                                <a @click="activeResource=resource">{{ resource.name }}</a>
+                                <div>{{ resource.weight + ' кг' }}</div>
+                                
+
+                                <div class="component c2" v-for="resource in getResource(resource)">
+                                    <a @click="activeResource=resource">{{ resource.name }}</a>
+                                    <div>{{ resource.weight + ' кг' }}</div>
+                                    
+                                    <div class="component c3" v-for="resource in getResource(resource)">
+                                        <a @click="activeResource=resource">{{ resource.name }}</a>
+                                        <br>
+                                        {{ resource.weight + ' кг' }}
+                                        <div class="component c4" v-for="resource in getResource(resource)">
+                                            <a @click="activeResource=resource">{{ resource.name }}</a>
+                                            <div>{{ resource.weight + ' кг' }}</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
