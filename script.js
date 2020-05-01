@@ -997,8 +997,7 @@ let app = new Vue({
         type: '',
         activeItem: null,
         activeResource: null,
-        search: '',
-        searchResult: ''
+        searchQuery: ''
     },
     methods:{
         c(){
@@ -1028,8 +1027,19 @@ let app = new Vue({
                 resources.push(resource);
             });
             return resources;
-            
         }, 
-     
     },
+    computed: {
+        filteredResources (){
+          if(this.searchQuery){
+            return this.resources.filter((item)=>{
+                let result = item.name.toLowerCase().startsWith(this.searchQuery.toLowerCase());
+                return result
+                
+            })
+          }else{
+            return this.resources;
+          }
+        }
+      }
   })

@@ -14,19 +14,15 @@
         <div class="main" @click="c()">
             <div class="sidebar">
                 <div class="sidebar-search">
-                    <input type="text" class="search-input" v-model="search">
-                    
+                    <input type="text" class="search-input" v-model="searchQuery">
                 </div>
                 <ul class="res-list">
-                    <li @click="activeResource=item"  class="res-item" :class="{active: item === activeResource}" v-for="(item, index) in resources" :key="index">
+                    <li @click="activeResource=item"  class="res-item" :class="{active: item === activeResource}" v-for="(item, index) in filteredResources" :key="index">
                         {{ item.name }}
                     </li>
                 </ul>
             </div>
             <div class="content">
-                
-                
-               
                     <div class="resurces">
                         <transition name="fade">
                         <div class="component main-component" v-if="activeResource != null">
