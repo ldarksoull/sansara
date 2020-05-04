@@ -71,7 +71,7 @@ let app = new Vue({
                 name: 'Бензин',
                 weight: 5,
                 type: 'Переработка',
-                components: [81,89]
+                components: [61,89]
             },
             {
                 id: 12,
