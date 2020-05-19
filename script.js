@@ -19,7 +19,7 @@ let app = new Vue({
             {
                 id: 3,
                 name: 'Апельсины',
-                weight: 5,
+                weight: 4.3, //5,
                 type: 'Добыча',
                 components: []
             },
@@ -48,7 +48,7 @@ let app = new Vue({
             {
                 id: 7,
                 name: 'Арбуз',
-                weight: 5,
+                weight: 5.2, //5,
                 type: 'Переработка',
                 components: []
             },
@@ -137,7 +137,7 @@ let app = new Vue({
             {
                 id: 21,
                 name: 'Говядина',
-                weight: 3.3,
+                weight: 2.2,//3.3,
                 type: 'Добыча'
             },
             {
@@ -178,20 +178,20 @@ let app = new Vue({
             {
                 id: 27,
                 name: 'Дыня',
-                weight: 2.5,
+                weight: 2.1, //2.5,
                 type: 'Добыча'
             },
             {
                 id: 28,
                 name: 'Железо',
-                weight: 5,
+                weight: 3, // 5
                 type: 'Переработка',
                 components: [29]
             },
             {
                 id: 29,
                 name: 'Железная руда',
-                weight: 5,
+                weight: 7,  // 8 было 
                 type: 'Переработка'
             },
             {
@@ -204,13 +204,13 @@ let app = new Vue({
             {
                 id: 31,
                 name: 'Зелень',
-                weight: 0,
+                weight: 2.5, //хз
                 type: 'Добыча'
             },
             {
                 id: 32,
                 name: 'Золото',
-                weight: 0,
+                weight: 1.7, // хз
                 type: 'Переработка',
                 components: [34]
             },
@@ -223,7 +223,7 @@ let app = new Vue({
             {
                 id: 34,
                 name: 'Золотая руда',
-                weight: 0,
+                weight: 17,
                 type: 'Добыча'
             },
             {
@@ -256,7 +256,7 @@ let app = new Vue({
             {
                 id: 39,
                 name: 'Картофель',
-                weight: 5,
+                weight: 4.9, //5,
                 type: 'Добыча'
             },
             {
@@ -269,7 +269,7 @@ let app = new Vue({
             {
                 id: 41,
                 name: 'Кимберлит',
-                weight: 0,
+                weight: 17,
                 type: 'Добыча',
                 components: []
             },
@@ -303,7 +303,7 @@ let app = new Vue({
             {
                 id: 46,
                 name: 'Кольцо',
-                weight: 0,
+                weight: 2.2, //хз
                 type: 'Крафт',
                 components: [147,32]
             },
@@ -337,7 +337,7 @@ let app = new Vue({
             {
                 id: 51,
                 name: 'Курица',
-                weight: 1.8,
+                weight: 2, //1.8,
                 type: 'Переработка'
             },
             {
@@ -350,7 +350,7 @@ let app = new Vue({
             {
                 id: 53,
                 name: 'Куриное филе',
-                weight: 0,
+                weight: 1.3, //хз
                 type: 'Переработка',
                 components: [51]
             },
@@ -434,33 +434,33 @@ let app = new Vue({
             {
                 id: 65,
                 name: 'Мука',
-                weight: 0,
+                weight: 1.4, //хз
                 type: 'Переработка',
                 components: [90]
             },
             {
                 id: 66,
                 name: 'Медь',
-                weight: 0.5,
+                weight: 3.2, //0.5
                 type: 'Переработка',
                 components: [67]
             },
             {
                 id: 67,
                 name: 'Медная руда',
-                weight: 10,
+                weight: 10, // также 10
                 type: 'Переработка',
             },
             {
                 id: 68,
                 name: 'Молоко',
-                weight: 2.3,
+                weight: 2.3, //2.3
                 type: 'Добыча'
             },
             {
                 id: 69,
                 name: 'Морковь',
-                weight: 0,
+                weight: 2.3, //хз
                 type: 'Добыча'
             },
             {
@@ -501,7 +501,7 @@ let app = new Vue({
             {
                 id: 75,
                 name: 'Одежда',
-                weight: 4.1,
+                weight: 5.3, //4.1
                 type: 'Крафт',
                 components: [133,128]
             },
@@ -542,7 +542,7 @@ let app = new Vue({
             {
                 id: 81,
                 name: 'Персики',
-                weight: 6.4,
+                weight: 5.2, //6.4,
                 type: 'Добыча'
             },
             {
@@ -568,13 +568,13 @@ let app = new Vue({
             {
                 id: 85,
                 name: 'Платиновая руда',
-                weight: 0,
+                weight: 25, // пиздец
                 type: 'Добыча'
             },
             {
                 id: 86,
                 name: 'Платина',
-                weight: 0,
+                weight: 1.8, //хз
                 type: 'Переработка',
                 components: [85]
             },
@@ -602,7 +602,7 @@ let app = new Vue({
             {
                 id: 90,
                 name: 'Пшеница',
-                weight: 1.3,
+                weight: 2.3, //1.3,
                 type: 'Добыча',
                 components: []
             },
@@ -616,7 +616,7 @@ let app = new Vue({
             {
                 id: 92,
                 name: 'Резина',
-                weight: 3.1,
+                weight: 2.3, //3.1
                 type: 'Переработка',
                 components: [116]
             },
@@ -670,20 +670,20 @@ let app = new Vue({
             {
                 id: 100,
                 name: 'Серебро',
-                weight: 0,
+                weight: 3, //хз
                 type: 'Переработка',
                 components: [101]
             },
             {
                 id: 101,
                 name: 'Серебряная руда',
-                weight: 0,
+                weight: 12, //хз
                 type: 'Добыча'
             },
             {
                 id: 102,
                 name: 'Серная руда',
-                weight: 11,
+                weight: 10, // 11
                 type: 'Добыча'
             },
             {
@@ -731,7 +731,7 @@ let app = new Vue({
             {
                 id: 109,
                 name: 'Сода',
-                weight: 3,
+                weight: 2.5, //3,
                 type: 'Добыча',
             },
             {
@@ -771,14 +771,14 @@ let app = new Vue({
             {
                 id: 115,
                 name: 'Сталь',
-                weight: 6,
+                weight: 5.3, // 6
                 type: 'Крафт',
                 components: [134, 28]
             },
             {
                 id: 116,
                 name: 'Старые покрышки',
-                weight: 4.2,
+                weight: 3, // 4.2
                 type: 'Добыча'
             },
             {
@@ -819,7 +819,7 @@ let app = new Vue({
             {
                 id: 122,
                 name: 'Сушеный табак',
-                weight: 0.6,
+                weight: 1.1, //0.6,
                 type: 'Переработка',
                 components: [125]
             },
@@ -833,13 +833,13 @@ let app = new Vue({
             {
                 id: 124,
                 name: 'Сырая нефть',
-                weight: 10,
+                weight: 10, // 10
                 type: 'Добыча'
             },
             {
                 id: 125,
                 name: 'Табак',
-                weight: 2,
+                weight: 2, //2
                 type: 'Добыча'
             },
             {
@@ -859,27 +859,27 @@ let app = new Vue({
             {
                 id: 128,
                 name: 'Ткань',
-                weight: 0.3,
+                weight: 2.1, // 0.3
                 type: 'Переработка',
                 components: [136]
             },
             {
                 id: 129,
                 name: 'Томаты',
-                weight: 6.2,
+                weight: 5.2, //6.2,
                 type: 'Добыча'
             },
             {
                 id: 130,
                 name: 'Томатный сок',
-                weight: 5,
+                weight: 4.2, //5,
                 type: 'Переработка',
                 components: [129]
             },
             {
                 id: 131,
                 name: 'Тростник',
-                weight: 1.3,
+                weight: 2.2, //1.3,
                 type: 'Добыча'
             },
             {
@@ -892,27 +892,27 @@ let app = new Vue({
             {
                 id: 133,
                 name: 'Фурнитура',
-                weight: 0,
+                weight: 6, // хз
                 type: 'Крафт',
                 components: [115,66]
             },
             {
                 id: 134,
                 name: 'Углерод',
-                weight: 0,
+                weight: 2.9, // около 5
                 type: 'Переработка',
                 components: [135]
             },
             {
                 id: 135,
                 name: 'Уголь',
-                weight: 5,
+                weight: 5.8,  //был 5
                 type: 'Добыча'
             },
             {
                 id: 136,
                 name: 'Хлопок',
-                weight: 5,
+                weight: 3, //5
                 type: 'Добыча'
             },
             {
@@ -966,13 +966,13 @@ let app = new Vue({
             {
                 id: 144,
                 name: 'Яблоки',
-                weight: 5.5,
+                weight: 5, //5.5,
                 type: 'Добыча'
             },
             {
                 id: 145,
                 name: 'Яблочный сок',
-                weight: 0,
+                weight: 3, //хз
                 type: 'Переработка',
                 components: [144]
             },
@@ -986,7 +986,7 @@ let app = new Vue({
             {
                 id: 147,
                 name: 'Бриллиант',
-                weight: 0.1,
+                weight: 1.7, // 0.1
                 type: 'Крафт',
                 components: [41]
             },
